@@ -63,14 +63,14 @@ A more sophisticated architecture designed to handle out-of-distribution samples
 To run this project:
 
 1. Open the notebook `Open Set Classification with MNIST.ipynb` in Google Colab
-2. For evaluation mode (default):
-   - The notebook is set to evaluation mode by default (`eval_mode = True`)
-   - Upload the pretrained models (`baseline_model.pth` and `model_osr.pth`) to the notebook environment.
-   - Run the entire notebook to see the pretrained model performance
-3. For training mode:
-   - Change the `eval_mode` parameter to `False` at the beginning of the notebook
-   - Run the entire notebook to train the models from scratch
-   - It is strongly recommended to use GPU runtime for training `(Runtime → Change runtime type → GPU)` because training will be significantly faster on GPU compared to CPU
+2. For training mode:
+    - The notebook is set to evaluation mode by default (`eval_mode = True`). Change the `eval_mode` parameter to `False`.
+    - Run the entire notebook to train the models from scratch.
+    - It is strongly recommended to use GPU runtime for training `(Runtime → Change runtime type → GPU)` because training will be significantly faster on GPU compared to CPU
+3. For evaluation mode:
+    - After you have a pre-trained model, to evaluate it, change the `eval_mode` parameter to `True` at the beginning of the notebook
+    - Run the entire notebook to evaluate the models
+
 
 ## Conclusion
 This project demonstrates an effective approach to Open-Set Recognition with the MNIST dataset. By combining traditional classification with distance-based unknown detection, the model can identify samples from classes not seen during training while maintaining high accuracy on known classes.
